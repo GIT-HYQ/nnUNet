@@ -49,17 +49,32 @@ def swap_lr(i):
 
 def decide_remaps(components):
     """components: [{"id": int, "cx": float}, ...].
-    Returns (per-component (old, new) pairs, {"midline": float, "margin": float})."""
+    Returns (per-component (old, new) pairs, {"midline": float, "margin": float}).
+    Twin guard: a side-conflicting component is remapped to its L/R twin only
+    if no OTHER component already carries the twin ID on the geometrically
+    correct side (outside the midline band). This blocks phantom-duplicate
+    remaps (twin already correctly placed) while still correcting true
+    arch-level swaps (twin on the wrong side or absent)."""
     cxs = [c["cx"] for c in components]
     mid = (min(cxs) + max(cxs)) / 2.0
     margin = max(MARGIN_MIN_VOX, MARGIN_FRAC * (max(cxs) - min(cxs)))
+
+    def side_of(cx):
+        if cx > mid + margin:
+            return "R"
+        if cx < mid - margin:
+            return "L"
+        return None
+
     remaps = []
     for c in components:
         new = c["id"]
-        if c["cx"] > mid + margin and SIDE_LUT[c["id"]] == "L":
-            new = swap_lr(c["id"])
-        elif c["cx"] < mid - margin and SIDE_LUT[c["id"]] == "R":
-            new = swap_lr(c["id"])
+        s = side_of(c["cx"])
+        if s is not None and SIDE_LUT[c["id"]] != s:
+            twin = swap_lr(c["id"])
+            if not any(o is not c and o["id"] == twin and side_of(o["cx"]) == s
+                       for o in components):
+                new = twin
         remaps.append((c["id"], new))
     return remaps, {"midline": mid, "margin": margin}
 

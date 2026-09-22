@@ -55,6 +55,24 @@ def test_midline_region_skipped():
     assert [new for _, new in remaps] == [17, 25]
 
 
+def test_twin_guard_blocks_phantom_duplicate():
+    # 17 correctly on the left; a phantom 17 duplicate on the right; 25
+    # correctly on the right. The phantom must NOT be remapped to 25 (the
+    # twin is already on the correct side) — remapping would destroy the
+    # correct 17 and dilute the 25.
+    comps = [{"id": 17, "cx": 20.0}, {"id": 17, "cx": 80.0}, {"id": 25, "cx": 85.0}]
+    remaps, _ = decide_remaps(comps)
+    assert [new for _, new in remaps] == [17, 17, 25]
+
+
+def test_twin_guard_allows_full_swap():
+    # Whole-arch swap: each twin sits on the WRONG side, so the guard must
+    # not block the remaps.
+    comps = [{"id": 25, "cx": 20.0}, {"id": 17, "cx": 80.0}]
+    remaps, _ = decide_remaps(comps)
+    assert [new for _, new in remaps] == [17, 25]
+
+
 def test_apply_assigner_swapped_array():
     seg = _seg_two_teeth(left_id=25, right_id=17)   # 左右 ID 互换的错误预测
     out, log = apply_assigner(seg)
