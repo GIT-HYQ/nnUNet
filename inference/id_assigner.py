@@ -23,6 +23,7 @@ from scipy import ndimage
 MIN_COMP_VOX = 20       # ignore specks
 MARGIN_MIN_VOX = 10     # ~3 mm at 0.3 mm/voxel
 MARGIN_FRAC = 0.08      # of arch x-extent
+INTERNAL_TWIN_FRAC = 0.5  # merged twin-pair guard threshold
 
 
 def build_side_lut():
@@ -100,7 +101,12 @@ def _components(seg):
 def apply_assigner(seg):
     """seg: 3D uint8 (z, y, x), labels 0..32 -> (remapped seg, log).
     Only the dominant label of a re-mapped component is rewritten; other
-    labels inside merged components are left untouched."""
+    labels inside merged components are left untouched.
+    Internal-twin guard: a remap is skipped when the component already
+    contains at least INTERNAL_TWIN_FRAC of the would-be-relabeled voxel
+    count carrying the twin label (merged L/R twin pair, both halves
+    correctly labeled; relabeling the dominant half would destroy the
+    correct half)."""
     lab, comps = _components(seg)
     out = seg.copy()
     log = []
@@ -110,10 +116,16 @@ def apply_assigner(seg):
     log.append({"midline": round(meta["midline"], 1),
                 "margin": round(meta["margin"], 1)})
     for (i, old, cx, nvox), (_, new) in zip(comps, remaps):
-        if old != new:
-            out[(lab == i) & (seg == old)] = new
-            log.append({"comp": i, "id_before": old, "id_after": new,
-                        "cx": round(cx, 1), "n_vox": nvox})
+        if old == new:
+            continue
+        m_old = (lab == i) & (seg == old)
+        n_old = int(np.count_nonzero(m_old))
+        n_twin = int(np.count_nonzero((lab == i) & (seg == new)))
+        if n_twin >= INTERNAL_TWIN_FRAC * n_old:
+            continue
+        out[m_old] = new
+        log.append({"comp": i, "id_before": old, "id_after": new,
+                    "cx": round(cx, 1), "n_vox": nvox})
     return out, log
 
 

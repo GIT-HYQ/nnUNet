@@ -96,6 +96,36 @@ def test_apply_assigner_empty():
     assert log == []
 
 
+def test_internal_twin_guard_blocks_merged_twin_pair():
+    # Merged component on the right: dominant 17 (an L-side ID, so the
+    # side conflicts) with an internal 25 part >= 50% of the 17 voxels.
+    # Both halves are a correctly-labeled merged twin pair; relabeling
+    # the dominant half would destroy the correct 25 half -> skip.
+    seg = np.zeros((16, 40, 100), dtype=np.uint8)
+    seg[4:12, 10:30, 10:20] = 17      # anchor tooth, correctly on the left
+    seg[4:12, 10:30, 60:73] = 17      # merged component, dominant 17 (13 vox)
+    seg[4:12, 10:30, 73:80] = 25      # internal 25 part (7 vox, ratio 0.54)
+    out, log = apply_assigner(seg)
+    assert out[8, 20, 65] == 17       # dominant half NOT relabeled
+    assert out[8, 20, 75] == 25       # internal 25 part untouched
+    assert len(log) == 1              # meta only, remap skipped
+
+
+def test_internal_twin_guard_allows_small_twin_sliver():
+    # Same geometry, but the internal 25 part is a small sliver (< 50% of
+    # the dominant part) — a partially mislabeled single tooth, so the
+    # remap must still happen.
+    seg = np.zeros((16, 40, 100), dtype=np.uint8)
+    seg[4:12, 10:30, 10:20] = 17      # anchor tooth, correctly on the left
+    seg[4:12, 10:30, 60:79] = 17      # merged component, dominant 17 (19 vox)
+    seg[4:12, 10:30, 79:80] = 25      # internal 25 sliver (1 voxel)
+    out, log = apply_assigner(seg)
+    assert out[8, 20, 65] == 25       # dominant half relabeled to 25
+    assert out[8, 20, 79] == 25       # sliver stays 25
+    assert len(log) == 2              # meta + 1 remap
+    assert log[1]["id_before"] == 17 and log[1]["id_after"] == 25
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:
