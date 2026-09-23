@@ -1,0 +1,5 @@
+{
+ "holdout_exclude": [],
+ "train_exclude": [],
+ "note": "2026-09-23 Task 5 whole-arch mirror audit over all 480 labels: zero MIRROR, zero SUSPECT (393 OK / 83 INSUFFICIENT / 18 EMPTY). No GT-wrong cases confirmed -> no exclusions (user rule: exclude only confirmed-GT-wrong). INSUFFICIENT (<6 laterally-determinable components, partial arches) and EMPTY cases are unverifiable by this detector, reported for transparency, not excluded. Source: tooth_3d_semantic/logs/wholearch_audit_all480.json (commit 652c8aa)."
+}
