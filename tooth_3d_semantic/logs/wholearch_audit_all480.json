@@ -1,0 +1,3257 @@
+[
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2F_001",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.077,
+  "n_det": 13,
+  "case": "ToothFairy2F_002",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.133,
+  "n_det": 15,
+  "case": "ToothFairy2F_003",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2F_004",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2F_005",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 20,
+  "case": "ToothFairy2F_006",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2F_007",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 23,
+  "case": "ToothFairy2F_008",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 20,
+  "case": "ToothFairy2F_009",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 22,
+  "case": "ToothFairy2F_010",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 27,
+  "case": "ToothFairy2F_011",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2F_012",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2F_013",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2F_014",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2F_015",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 22,
+  "case": "ToothFairy2F_016",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 21,
+  "case": "ToothFairy2F_018",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 21,
+  "case": "ToothFairy2F_020",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.143,
+  "n_det": 7,
+  "case": "ToothFairy2F_021",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 20,
+  "case": "ToothFairy2F_022",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 21,
+  "case": "ToothFairy2F_023",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2F_024",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2F_025",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 23,
+  "case": "ToothFairy2F_026",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2F_027",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 20,
+  "case": "ToothFairy2F_028",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2F_029",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2F_030",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2F_031",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.059,
+  "n_det": 17,
+  "case": "ToothFairy2F_032",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2F_033",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 23,
+  "case": "ToothFairy2F_034",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2F_036",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 20,
+  "case": "ToothFairy2F_037",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2F_038",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2F_039",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 26,
+  "case": "ToothFairy2F_040",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.05,
+  "n_det": 20,
+  "case": "ToothFairy2F_041",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2F_043",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2F_044",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 23,
+  "case": "ToothFairy2F_045",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2F_046",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2F_047",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 20,
+  "case": "ToothFairy2F_048",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2F_049",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2F_050",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 17,
+  "case": "ToothFairy2F_051",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.062,
+  "n_det": 16,
+  "case": "ToothFairy2F_052",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2F_053",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2F_054",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2F_055",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 2,
+  "case": "ToothFairy2F_056",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2F_057",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2F_058",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 24,
+  "case": "ToothFairy2F_059",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2F_060",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 23,
+  "case": "ToothFairy2F_061",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2F_062",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2F_063",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 24,
+  "case": "ToothFairy2F_064",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2F_065",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2F_066",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2F_067",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_001",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_002",
+  "split": "holdout"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_003",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_004",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_005",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_006",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 17,
+  "case": "ToothFairy2P_007",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 23,
+  "case": "ToothFairy2P_008",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_009",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_010",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_011",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 20,
+  "case": "ToothFairy2P_012",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_013",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_014",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_015",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_016",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_017",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_018",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_019",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_020",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_021",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_022",
+  "split": "holdout"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 3,
+  "case": "ToothFairy2P_023",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_024",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_025",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_026",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_027",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_028",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_029",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_030",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_031",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_032",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_033",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_034",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_035",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_036",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_037",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_038",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_039",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_040",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_041",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_042",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_045",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_046",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_047",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_048",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_049",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_050",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_051",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_052",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_054",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_055",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_056",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_057",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_058",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_059",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_060",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_061",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.143,
+  "n_det": 7,
+  "case": "ToothFairy2P_063",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_064",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_065",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_066",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_067",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2P_070",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 17,
+  "case": "ToothFairy2P_071",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.1,
+  "n_det": 10,
+  "case": "ToothFairy2P_075",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_076",
+  "split": "holdout"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_077",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_079",
+  "split": "holdout"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_080",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_081",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.125,
+  "n_det": 8,
+  "case": "ToothFairy2P_082",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_083",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_084",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_085",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_086",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_087",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 17,
+  "case": "ToothFairy2P_088",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_089",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.091,
+  "n_det": 11,
+  "case": "ToothFairy2P_090",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_091",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_092",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_093",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_094",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_095",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_096",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_097",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.167,
+  "n_det": 6,
+  "case": "ToothFairy2P_098",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2P_099",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_100",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2P_101",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_102",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_103",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_104",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_105",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_106",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_107",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_108",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_109",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_110",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_111",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_112",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_113",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_114",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_115",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_116",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_117",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_118",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2P_119",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_120",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_121",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_122",
+  "split": "holdout"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_123",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_124",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 3,
+  "case": "ToothFairy2P_125",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_126",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.067,
+  "n_det": 15,
+  "case": "ToothFairy2P_127",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_128",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_129",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_130",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_131",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_132",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_133",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_134",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_135",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_136",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_137",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 3,
+  "case": "ToothFairy2P_138",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_139",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 3,
+  "case": "ToothFairy2P_140",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_141",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2P_142",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.125,
+  "n_det": 8,
+  "case": "ToothFairy2P_143",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_144",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_145",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_146",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_147",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_148",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_150",
+  "split": "holdout"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_151",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_152",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_190",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_191",
+  "split": "holdout"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 2,
+  "case": "ToothFairy2P_192",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_193",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.167,
+  "n_det": 6,
+  "case": "ToothFairy2P_194",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 20,
+  "case": "ToothFairy2P_195",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_197",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 17,
+  "case": "ToothFairy2P_198",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_199",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_200",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_201",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_202",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_203",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_204",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.067,
+  "n_det": 15,
+  "case": "ToothFairy2P_205",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_206",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_207",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_208",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_209",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_210",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_211",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_212",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_213",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_214",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_215",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_216",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_217",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_228",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_229",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 17,
+  "case": "ToothFairy2P_230",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_231",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_232",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_233",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 3,
+  "case": "ToothFairy2P_234",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_235",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_236",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_237",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2P_238",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_239",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_240",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_241",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_242",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2P_243",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_244",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_245",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_246",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_247",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.077,
+  "n_det": 13,
+  "case": "ToothFairy2P_248",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.091,
+  "n_det": 11,
+  "case": "ToothFairy2P_249",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_250",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_251",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_252",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_253",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_254",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_255",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_256",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_257",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2P_258",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_259",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_260",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_261",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_262",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_263",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_264",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_321",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_322",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2P_323",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_324",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_325",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_326",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_327",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_328",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 2,
+  "case": "ToothFairy2P_329",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_330",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_331",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_332",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_333",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_334",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_335",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_336",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_337",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.125,
+  "n_det": 8,
+  "case": "ToothFairy2P_338",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_339",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_340",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_341",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_342",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_343",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2P_344",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_345",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_346",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_347",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2P_348",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_349",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_350",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_351",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_352",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.143,
+  "n_det": 7,
+  "case": "ToothFairy2P_353",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_354",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_355",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_356",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_357",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_358",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_359",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_360",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_361",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_362",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_363",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_364",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 17,
+  "case": "ToothFairy2P_365",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_366",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 2,
+  "case": "ToothFairy2P_367",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_368",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_369",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 3,
+  "case": "ToothFairy2P_370",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_371",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_372",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_373",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_376",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_377",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_378",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_379",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_380",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_381",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.125,
+  "n_det": 8,
+  "case": "ToothFairy2P_382",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_383",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_384",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2P_385",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_386",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_387",
+  "split": "holdout"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_388",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 2,
+  "case": "ToothFairy2P_389",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_390",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2P_391",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_392",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_393",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_394",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_395",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_396",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_397",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_398",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_399",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_400",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_401",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_402",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_403",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_404",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 17,
+  "case": "ToothFairy2P_405",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_406",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_407",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_408",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_409",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_410",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_411",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_412",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_413",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_414",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_415",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_416",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_418",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2P_419",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 3,
+  "case": "ToothFairy2P_420",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_421",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_422",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_423",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_424",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_425",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_426",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2P_427",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_428",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_429",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2P_430",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2P_431",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2P_432",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_433",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_434",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_435",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_436",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_437",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_438",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_439",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_440",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_442",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_443",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_444",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_445",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_446",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_447",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_448",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_449",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_450",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_451",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_452",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_453",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_454",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_455",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_456",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_458",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_459",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 19,
+  "case": "ToothFairy2P_460",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_461",
+  "split": "holdout"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_462",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.1,
+  "n_det": 10,
+  "case": "ToothFairy2P_463",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_464",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_465",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 21,
+  "case": "ToothFairy2P_466",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_467",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_468",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.091,
+  "n_det": 11,
+  "case": "ToothFairy2P_470",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_471",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_472",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 3,
+  "case": "ToothFairy2P_473",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_474",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_475",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_477",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_478",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_479",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_480",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_481",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_482",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_485",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_486",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_487",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_488",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_489",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_491",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_492",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_493",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_494",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_496",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_497",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_498",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_499",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_500",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_501",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_502",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_503",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_504",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_505",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 2,
+  "case": "ToothFairy2P_506",
+  "split": "holdout"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2P_507",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_508",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 0,
+  "case": "ToothFairy2P_509",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_510",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_511",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_512",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2P_513",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_514",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 9,
+  "case": "ToothFairy2P_516",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_517",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 16,
+  "case": "ToothFairy2P_518",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 14,
+  "case": "ToothFairy2P_519",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_520",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_521",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_522",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.091,
+  "n_det": 11,
+  "case": "ToothFairy2P_523",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_524",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_526",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 3,
+  "case": "ToothFairy2P_527",
+  "split": "holdout"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 4,
+  "case": "ToothFairy2P_528",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_529",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_530",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 12,
+  "case": "ToothFairy2P_531",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 17,
+  "case": "ToothFairy2P_534",
+  "split": "train"
+ },
+ {
+  "status": "INSUFFICIENT",
+  "n_det": 5,
+  "case": "ToothFairy2P_535",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 11,
+  "case": "ToothFairy2P_536",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 15,
+  "case": "ToothFairy2P_537",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 18,
+  "case": "ToothFairy2P_538",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 17,
+  "case": "ToothFairy2P_539",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_540",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 13,
+  "case": "ToothFairy2P_542",
+  "split": "holdout"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 7,
+  "case": "ToothFairy2P_543",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 8,
+  "case": "ToothFairy2P_544",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 6,
+  "case": "ToothFairy2P_545",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_546",
+  "split": "train"
+ },
+ {
+  "status": "EMPTY",
+  "case": "ToothFairy2P_547",
+  "split": "train"
+ },
+ {
+  "status": "OK",
+  "score": 0.0,
+  "n_det": 10,
+  "case": "ToothFairy2P_548",
+  "split": "train"
+ }
+]
