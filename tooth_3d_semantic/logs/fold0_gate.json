@@ -1,0 +1,38 @@
+{
+ "verdict": "PASS",
+ "criterion_1": {
+  "rule": "1001-raw best20 >= 1000-raw best20 - 0.02",
+  "1000_raw_best20": 0.9744,
+  "1001_raw_best20": 0.9855,
+  "threshold": 0.9544,
+  "pass": true
+ },
+ "criterion_2": {
+  "rule": "1001-raw worst20 >= 1000-raw worst20 + 0.03",
+  "1000_raw_worst20": 0.6183,
+  "1001_raw_worst20": 0.8773,
+  "threshold": 0.6483,
+  "pass": true
+ },
+ "reference_1001_assigned": {
+  "best20": 0.9855,
+  "worst20": 0.8773,
+  "note": "assigner adds ~nothing on top of 1001-raw (model already L/R-correct); kept as production safety net"
+ },
+ "subset": "40 cases = 20 worst + 20 best by Task-3 dice_before (tooth_3d_semantic/logs/lr_census_66.jsonl)",
+ "models": {
+  "1000": "Dataset1000_ToothSemanticRAS/nnUNetTrainer__nnUNetPlans__3d_fullres fold_0 checkpoint_final",
+  "1001": "Dataset1001_ToothSemanticNoXMirror/nnUNetTrainer_onlyMirror01__nnUNetPlans__3d_fullres fold_0 checkpoint_final"
+ },
+ "n_cases": [
+  40,
+  40,
+  40
+ ],
+ "artifacts": [
+  "tooth_3d_semantic/logs/gate_1000_fold0.jsonl",
+  "tooth_3d_semantic/logs/gate_1001_fold0_raw.jsonl",
+  "tooth_3d_semantic/logs/gate_1001_fold0_assigned.jsonl"
+ ],
+ "date": "2026-09-30"
+}
