@@ -68,7 +68,7 @@
 | `scripts/train_folds_seq_noxmirror.sh` | 新建 | 5 折顺序训练，首折失败即停 |
 | `scripts/eval_subset.py` | 新建 | fold_0 门控用：40-case 子集单折评估（1000 vs 1001 对比） |
 | `scripts/eval_holdout_general.py` | 新建 | 通用 holdout 集成评估（任意 predictions 目录，供 1001 终评） |
-| 复用不动 | — | `nnUNetTrainer_onlyMirror01`、`scripts/eval_holdout_ras.py`（指标口径参照）、`inference/tooth_relabel_fdi.py` |
+| 复用不动 | — | `nnUNetTrainer_onlyMirror01`、`scripts/eval_holdout_ras_1000.py`（指标口径参照；2026-10-02 加 1000 标识归档）、`inference/tooth_relabel_fdi.py` |
 
 ## 执行顺序与并行
 
@@ -1243,10 +1243,10 @@ git commit -m "feat: sequential fold 1-4 driver for Dataset1001"
 ```bash
 cd /home/share/clr/share/work/CBCT/nnUNet
 source dataset_conversion/setup_nnunet_env.sh
-# 1001 5-fold ensemble 预测（GPU 1,2,3 分 case，参照 scripts/eval_holdout_ras.py 的 worker 结构，
+# 1001 5-fold ensemble 预测（GPU 1,2,3 分 case，参照 scripts/eval_holdout_ras_1000.py 的 worker 结构，
 # 把 RESULTS 指向 1001 trainer 目录、FOLDS=[0..4]、输出到 eval/holdout_ensemble_noxmirror/predictions/）
 ```
-（实现方式：复制 `scripts/eval_holdout_ras.py` 为 `scripts/eval_holdout_noxmirror.py`，改 `RESULTS` 与输出目录两处常量，后台跑 ~20min。）
+（实现方式：复制 `scripts/eval_holdout_ras_1000.py` 为 `scripts/eval_holdout_noxmirror.py`，改 `RESULTS` 与输出目录两处常量，后台跑 ~20min。）
 
 ```bash
 # 4 列指标（EXTRA_EXCL = Task 5 裁决的 holdout 追加剔除集，无则省略参数）
@@ -1374,3 +1374,10 @@ git commit -m "feat: NC supplement conversion + audit + Dataset1002 incremental 
 3. 剔除路径按实际布局改为 `nnUNetPlans_{3d_fullres,2d}/` 的三件套 + `gt_segmentations/${c}.nii.gz`；新增 preprocessed case 数一致性检查（src/dst b2nd case 计数相等）；拷贝后对 `nnUNetPlans.json` 做 dataset_name sed（`sed -i` 换 inode，源不受影响）。
 4. **阶段拆分**：fold_0 ≈38h 跨会话 → Task 6 = Phase A（3 脚本 + 组装验证 + 启动训练 + 开训 1h 健康检查 + 提交 3 脚本）/ Phase B（训练完成后：3 次门控评估 + fold0_gate.json + 提交）。Phase B 训练完成后再派发（设 durable 提醒）。
 5. `eval_subset.py` 预测路径已对照 `scripts/eval_holdout_ras.py:67-85`（1000 ensemble 权威调用）**逐字核证一致**，无需改动。
+
+**2026-10-02（执行期，脚本归档与文档清理，用户裁决）**：
+1. 1000 时代脚本加 1000 标识归档重命名：`scripts/train_fold_ras.sh` → `train_fold_ras_1000.sh`、`scripts/train_folds_seq_ras.sh` → `train_folds_seq_ras_1000.sh`、`scripts/eval_holdout_ras.py` → `eval_holdout_ras_1000.py`（内部互调与 Usage 措辞同步更新，文件头加归档注记）。
+2. 删除 4 个一次性诊断脚本（`spatial_id_decompose.py`、`component_id_diag.py`、`lr_guard2_sim66.py`、`lr_guard2_verify.py`）与 `nc_supplement_analysis.md`（证据保留于 `tooth_3d_semantic/logs/`、本文档与台账）。
+3. 已提交代码的功能依赖入库：`dataset_conversion/` 全套（含已提交训练/预测脚本所需的 `setup_nnunet_env.sh`；排除 `__pycache__`）+ `inference/tooth_relabel_fdi.py` + `inference/__init__.py`。
+4. 本文档前瞻性引用（文件表 line 71、Task 8 Step 2 实现方式）同步改为新名；历史修订记录中的旧名保留不改。
+5. `tooth_3d_quickstart.md` / `tooth_data_pipeline_plan.md` 过时内容修正后提交（删除/重命名脚本的引用、1001 与 ID assigner 现状、tooth_predict 的 `_0000.nii.gz` 文件名约束与 `--id_assign` 参数）。
