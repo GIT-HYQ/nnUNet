@@ -72,6 +72,7 @@ def main():
 
     os.makedirs(OUT, exist_ok=True)
     rows = []
+    per_case_raw = []  # unrounded per-class dice, for aggregation (round only at the end)
     for c in sorted(os.listdir(PRED)):
         if not c.endswith(".nii.gz"):
             continue
@@ -88,8 +89,10 @@ def main():
                      "n_remaps": n_remaps,
                      "fg_before": round(mean_of(b), 4), "fg_after": round(mean_of(a), 4),
                      "per_class_after": {str(k): round(v, 4) for k, v in a.items()}})
+        per_case_raw.append(a)
         print(f"[{len(rows)}/72] {case} {rows[-1]['fg_before']} -> {rows[-1]['fg_after']} "
               f"({rows[-1]['n_remaps']} remaps)", flush=True)
+    assert len(rows) == 72, f"got {len(rows)} results"
 
     with open(f"{OUT}/per_case_metrics.jsonl", "w") as f:
         for r in rows:
@@ -99,8 +102,8 @@ def main():
     n69 = [r["fg_after"] for r in rows if r["case"] not in empty_gt]
     n66 = [r["fg_after"] for r in rows if r["case"] not in empty_gt and r["case"] not in PATHO]
     cls_sum, cls_cnt = np.zeros(33), np.zeros(33)
-    for r in rows:
-        for c, v in r["per_class_after"].items():
+    for a in per_case_raw:
+        for c, v in a.items():
             cls_sum[int(c)] += v
             cls_cnt[int(c)] += 1
     per_class = {str(c): round(float(cls_sum[c] / cls_cnt[c]), 4) if cls_cnt[c] else None
