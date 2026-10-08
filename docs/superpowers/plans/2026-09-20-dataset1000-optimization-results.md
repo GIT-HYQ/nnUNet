@@ -176,6 +176,8 @@
 | 门控 | `tooth_3d_semantic/logs/fold0_gate.json` + 3 份 `gate_*.jsonl` |
 | 审计 | `tooth_3d_semantic/logs/wholearch_audit_decisions.json` |
 
+注：`holdout_ensemble_ras_idassigned_final/` 为本次重算的落盘产物（gitignored 不入库）；入库的权威副本是 `tooth_3d_semantic/eval/holdout_ensemble_ras_idassigned/`，两者数值逐项相同（终审核验）。
+
 复现命令：
 
 ```bash

@@ -117,8 +117,7 @@ def aggregate(rows):
     return {
         "n_cases": len(rows),
         "ensemble": "5-fold logit average, checkpoint_final, mirroring+gaussian",
-        "note": "trainer nnUNetTrainer_onlyMirror01: TTA mirroring restricted to axes (0,1) (z/y), consistent with training; "
-                "fold_0 trained with global batch 18 (4.5M samples); folds 1-4 with global batch 8 (2M each)",
+        "note": "all folds trained with global batch 8 (nnUNetTrainer_onlyMirror01, no x-mirror)",
         "mean_foreground_dice": round(float(np.mean([r["fg_dice"] for r in rows])), 4),
         "std_foreground_dice": round(float(np.std([r["fg_dice"] for r in rows])), 4),
         "min_case": min(rows, key=lambda r: r["fg_dice"])["case"],

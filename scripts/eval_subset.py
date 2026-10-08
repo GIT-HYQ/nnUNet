@@ -59,7 +59,6 @@ def main():
 
     out_rows = []
     for i, c in enumerate(cases, 1):
-        img = sitk.ReadImage(f"{GT}/{c}.nii.gz")  # shape/spacing reference
         # read raw image for this case from Dataset1000 imagesTr
         raw = sitk.ReadImage(
             f"{BASE}/tooth_3d_semantic/raw/Dataset1000_ToothSemanticRAS/imagesTr/{c}_0000.nii.gz")
