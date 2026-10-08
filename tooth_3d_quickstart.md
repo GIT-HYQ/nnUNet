@@ -3,7 +3,7 @@
 
 本快速入门介绍了牙齿多类别3D分割的首个可运行集成流程。
 
-> **当前状态（2026-10-02）**：生产配置 = **Dataset1000（RAS 帧）5 折集成 + ID assigner 后处理**（`tooth_predict.py` 默认开启），66-case holdout 0.9094、弱类全 ≥0.80。**Dataset1001**（同数据同划分，去除 x 轴镜像数据增强）训练中（folds 1–4，ETA 2026-10-07），终评通过后接替 1000 成为生产模型。L/R ID 错误背景与三轨方案：`docs/superpowers/plans/2026-09-20-dataset1000-optimization.md`。
+> **当前状态（2026-10-08）**：生产配置 = **Dataset1001（去 x 轴镜像）5 折集成**（`tooth_predict.py` 推荐模型，ID assigner 默认 on 作安全网），66-case holdout **0.9281**、32/32 类 ≥0.80（弱类最低 0.856）。上一代 Dataset1000 + assigner（0.9094）留作对照/回退。终评四列对比：`docs/superpowers/plans/2026-09-20-dataset1000-optimization-results.md`。L/R ID 错误背景与三轨方案：`docs/superpowers/plans/2026-09-20-dataset1000-optimization.md`。
 
 ## 1）分析spacing（推荐用于目标spacing）
 
@@ -213,7 +213,7 @@ python dataset_conversion/ToothFairy2SemanticRAS.py
 python -m nnunetv2.experiment_planning.plan_and_preprocess_entrypoints -d 1000
 ```
 
-**去 x 轴镜像重训（Dataset1001_ToothSemanticNoXMirror，2026-09-24 起）**：根因 = nnUNet 默认 x 轴镜像数据增强不做标签重映射 → 颌弓级 L/R ±8 ID 互换（见上文 plan 文档）。与 1000 同数据同划分（480 case、无剔除；全量审计证实零 GT 错误），仅 trainer 改为 `nnUNetTrainer_onlyMirror01`（只镜像 z/y 轴）。fold_0 门控 PASS（2026-09-30，worst20 +0.259），folds 1–4 训练中（ETA 2026-10-07）。
+**去 x 轴镜像重训（Dataset1001_ToothSemanticNoXMirror，2026-09-24 起）**：根因 = nnUNet 默认 x 轴镜像数据增强不做标签重映射 → 颌弓级 L/R ±8 ID 互换（见上文 plan 文档）。与 1000 同数据同划分（480 case、无剔除；全量审计证实零 GT 错误），仅 trainer 改为 `nnUNetTrainer_onlyMirror01`（只镜像 z/y 轴）。fold_0 门控 PASS（2026-09-30，worst20 +0.259），5 折已全部完成（2026-10），终评 66-case 0.9281 胜出并接替 1000 成为生产模型。
 
 ```bash
 # 组装 raw（已执行；自 1000 硬链接拷贝，新 ID 1001，不覆盖 999/1000）
@@ -239,12 +239,14 @@ bash scripts/train_fold_ras_1000.sh 0     # 单折；GPU 1,2,3（留 0 空闲）
 bash scripts/train_folds_seq_ras_1000.sh  # 5 折顺序，首折失败即停
 ```
 
-去 x 轴镜像帧（Dataset1001，2026-09-24 起，训练中）：
+去 x 轴镜像帧（Dataset1001，2026-09-24 起；**5 折已于 2026-10 完成，现为生产模型**）：
 
 ```bash
-bash scripts/train_fold_noxmirror.sh 1    # 单折（fold 0 已完成，内部 val 0.8185）；GPU 1,2,3
+bash scripts/train_fold_noxmirror.sh 1    # 单折；GPU 1,2,3
 bash scripts/train_folds_seq_noxmirror.sh # folds 1–4 顺序，首折失败即停
 ```
+
+- Dataset1001 内部 val（同 split，vs 1000 括号内）：fold_0 **0.8185**（0.650）、fold_1 **0.7694**（0.6705）、fold_2 **0.8122**（0.7347）、fold_3 **0.8066**（0.7083）、fold_4 **0.8042**（0.6772）；均值 **0.8022** vs 0.6881，5/5 折全部提升。
 
 - 脚本带 `--c`：fold 结果目录有 checkpoint 即自动恢复（final→latest→best），没有则警告后正常新训；要强制重训先删 `results/.../fold_<N>/`。已完成的折带 `--c` 重跑是安全空转（重存 final + 重跑内部验证后 exit 0）。
 - 日志：`tooth_3d_semantic/logs/train_ras_fold<N>.log` 经 tee 为块缓冲，长时间"静默"属正常；**权威进度看 `results/.../fold_<N>/training_log_*.txt`（最新时间戳那份，每 epoch 落盘带时间戳）**。
@@ -270,16 +272,18 @@ python scripts/eval_holdout_ras_1000.py        # 全量；--smoke 为单 case �
 
 结果：72 case raw 0.7837；69 非空 **0.8177**；66-case（剔 3 低分）0.8446（999 为 0.8524）——与旧模型质量持平（逐例 36 升/33 降，噪声级差异），朝向修正零代价。输出：`tooth_3d_semantic/eval/holdout_ensemble_ras/`。
 
-**1000 + ID assigner（2026-09-23，当前生产配置）**：66-case **0.9094**（raw 0.8446 → +0.065）、69=0.899、72=0.8615；上颌 0.8945 / 下颌 0.9085；10 个弱类全 ≥0.80（最低 23/FDI37=0.8378）；零回退（>0.005）。输出：`tooth_3d_semantic/eval/holdout_ensemble_ras_idassigned/`。
+**1000 + ID assigner（2026-09-23，原生产配置，已被 1001 取代）**：66-case **0.9094**（raw 0.8446 → +0.065）、69=0.899、72=0.8615；上颌 0.8945 / 下颌 0.9085；10 个弱类全 ≥0.80（最低 23/FDI37=0.8378）；零回退（>0.005）。输出：`tooth_3d_semantic/eval/holdout_ensemble_ras_idassigned_final/`。
+
+**1001 去镜像终评（2026-10-08，当前生产配置）**：`scripts/eval_holdout_noxmirror.py`（5 折集成，TTA 仅 z/y）+ `scripts/eval_holdout_general.py` 计指标。**1001-raw 66-case 0.9281 / 69=0.9253 / 72=0.8868**（上颌 0.9237 / 下颌 0.9434）；+ID assigner 后逐位不变（72 例仅 1 次重映射，assigner 仅作安全网）。弱类 10 类全 ≥0.856（最低 4/FDI14=0.856），32/32 类 ≥0.80。四列对比与逐类/逐 case 明细见 `docs/superpowers/plans/2026-09-20-dataset1000-optimization-results.md`；输出：`tooth_3d_semantic/eval/holdout_ensemble_noxmirror{,_raw,_assigned}/`。
 
 ## 9）新图像预测
 
-使用 RAS 帧生产模型（Dataset1000，5 折 logit 集成，mirroring+gaussian；0.8177 为 1000 裸分，生产配置另含默认开启的 ID assigner，66-case 0.9094）：
+使用去 x 镜像 RAS 帧生产模型（Dataset1001，5 折 logit 集成，TTA 镜像仅 z/y；66-case holdout **0.9281**（裸分，1000 裸分为 0.8446、1000+assigner 为 0.9094），默认另开 ID assigner 作安全网——1001 上仅 1 次重映射、零指标损失）：
 
 ```bash
 source dataset_conversion/setup_nnunet_env.sh
 python inference/tooth_predict.py \
-    --model_dir tooth_3d_semantic/results/Dataset1000_ToothSemanticRAS/nnUNetTrainer__nnUNetPlans__3d_fullres \
+    --model_dir tooth_3d_semantic/results/Dataset1001_ToothSemanticNoXMirror/nnUNetTrainer_onlyMirror01__nnUNetPlans__3d_fullres \
     --input /path/to/new_scan_0000.nii.gz \
     --output /path/to/pred.nii.gz
 ```
@@ -289,9 +293,10 @@ python inference/tooth_predict.py \
 - `--model_dir` 必须是 trainer 父目录（含 `plans.json` 与 `fold_N/`），不是某个 `fold_N` 子目录；
 - `--folds` 默认自动检测全部可用折（5 折 logit 集成）；单折用 `--folds 0`；
 - 输入文件名须以 `_0000.nii.gz` 结尾（nnUNet 约定，脚本强制校验）；可为整卷（nnUNet 推理时自动重采样与前景裁剪）；输入应为 RAS 朝向（与训练数据 `tooth_fairy2_m` 一致）；
-- `--id_assign on/off`（默认 `on`）：确定性 L/R ID 一致性后处理（连通分量 + 中线 + 双孪生守卫，见 plan 文档）；当前生产配置 = 1000 集成 + 该后处理。Dataset1001（去 x 轴镜像）终评通过后将仅保留为安全网（模型本身已 L/R 正确）；
+- `--id_assign on/off`（默认 `on`）：确定性 L/R ID 一致性后处理（连通分量 + 中线 + 双孪生守卫，见 plan 文档）；当前生产配置 = 1001 集成，该后处理仅作安全网（1001 模型本身已 L/R 正确，72 例 holdout 仅 1 次重映射、逐位指标不变；`off` 一键关闭）；
 - 输出标签空间 1–32：1–8 右上、9–16 左上、17–24 左下（FDI 31–38）、25–32 右下（FDI 41–48）（FDI 对照见 §3 的 label_map）；
 - 将输出转回临床 FDI 编号（交付/展示用）见 `fdi_label_conversion.md`，程序为 `inference/tooth_relabel_fdi.py`；
+- 上一代 RAS 模型（Dataset1000，66-case +assigner 0.9094，留作对照/回退）：`--model_dir` 改指 `tooth_3d_semantic/results/Dataset1000_ToothSemanticRAS/nnUNetTrainer__nnUNetPlans__3d_fullres`；
 - 旧 RPI 帧模型（Dataset999，与旧朝向扫描配套）：`--model_dir` 改指 `tooth_3d_semantic/results/Dataset999_ToothSemantic/nnUNetTrainer__nnUNetPlans__3d_fullres` 即可。
 
 ## 10）验证与审计工具

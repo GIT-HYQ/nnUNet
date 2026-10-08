@@ -2,14 +2,23 @@
 """
 Predict tooth segmentation on a new CBCT image using a trained nnUNetv2 model.
 
-Default production model: Dataset1000_ToothSemanticRAS (true-RAS frame,
-tooth_fairy2_m), 5-fold logit ensemble — the configuration behind the
-0.8177 holdout result (see tooth_3d_quickstart.md §8).
+Default production model (since 2026-10-08 final evaluation):
+Dataset1001_ToothSemanticNoXMirror (true-RAS frame, tooth_fairy2_m;
+x-axis mirroring disabled in training and restricted to z/y in
+inference TTA), 5-fold logit ensemble — 66-case holdout 0.9281 raw
+(1000 baseline was 0.8446 raw / 0.9094 with the ID assigner; all 32
+classes >= 0.80, weak-class minimum 0.856).
+Recommended --model_dir:
+    tooth_3d_semantic/results/Dataset1001_ToothSemanticNoXMirror/nnUNetTrainer_onlyMirror01__nnUNetPlans__3d_fullres
+The L/R id-assigner stays ON by default as a safety net: on 1001 it
+triggered 1 remap across the 72 holdout cases with zero metric change.
+See tooth_3d_quickstart.md §8/§9 and
+docs/superpowers/plans/2026-09-20-dataset1000-optimization-results.md.
 
 Usage:
     source dataset_conversion/setup_nnunet_env.sh
     python inference/tooth_predict.py \
-        --model_dir tooth_3d_semantic/results/Dataset1000_ToothSemanticRAS/nnUNetTrainer__nnUNetPlans__3d_fullres \
+        --model_dir tooth_3d_semantic/results/Dataset1001_ToothSemanticNoXMirror/nnUNetTrainer_onlyMirror01__nnUNetPlans__3d_fullres \
         --input /path/to/new_scan.nii.gz \
         --output /path/to/output.nii.gz
 
@@ -18,7 +27,9 @@ Notes:
     subdirs), NOT a single fold_N directory.
     --folds: folds to average (logit ensemble). Default: auto-detect all
     available folds (5-fold ensemble). Pass e.g. --folds 0 for single-fold.
-    Inference uses mirroring + gaussian, matching the holdout evaluation.
+    Inference uses mirroring + gaussian, matching the holdout evaluation;
+    with the 1001 checkpoint the mirrored axes are automatically limited
+    to (0, 1) = z/y (trainer name is read from the checkpoint).
     The input scan should be in RAS orientation (same as the training data).
     Output labels are 1-32 (1-8 upper right, 9-16 upper left, 17-24 lower
     left, 25-32 lower right); convert to clinical FDI numbering with
@@ -118,7 +129,7 @@ def main():
     parser = argparse.ArgumentParser(description="Predict tooth segmentation on new CBCT")
     parser.add_argument('--model_dir', required=True,
                         help='TRAINER output directory (parent of fold_N), e.g. '
-                             'tooth_3d_semantic/results/Dataset1000_ToothSemanticRAS/nnUNetTrainer__nnUNetPlans__3d_fullres')
+                             'tooth_3d_semantic/results/Dataset1001_ToothSemanticNoXMirror/nnUNetTrainer_onlyMirror01__nnUNetPlans__3d_fullres')
     parser.add_argument('--input', required=True, help='Input CBCT .nii.gz file')
     parser.add_argument('--output', required=True, help='Output segmentation .nii.gz file')
     parser.add_argument('--folds', nargs='*', type=int, default=None,
