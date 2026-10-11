@@ -121,7 +121,8 @@
 - [x] Wave 1 幻影概率门控（**判死**：自信地错，AUC 0.873 不可分）
 - [x] Wave 2 原设计量化推翻（96% 已是部分牙列；替代杠杆见 §7）
 - [x] §7.① gapcut fold_0 试点（2026-10-11 01:37 训完，**门控 FAIL**，见 §9）
-- [ ] Wave 3 下一杠杆：待用户裁决（1500ep 零代码 vs gapcut v2 vs ResEnc backport）
+- [x] Wave 3 下一杠杆：**用户裁决「跳过 1500ep 直接 ResEnc」**（2026-10-11）
+- [ ] §10 ResEncL fold_0 试点（2026-10-11 17:14 启动，ETA 10-13 深夜；训完按同口径门控）
 - [ ] 终评报告
 
 ## 九、gapcut fold_0 门控结果（2026-10-11，FAIL）
@@ -144,3 +145,15 @@
 **结论**：gapcut 方向对幻影家族有效（P_036 等 7 例全升），但单独使用使决策边界向"无牙"偏移，在 missed 已是第一家族（47.5%）的背景下净收益为负。**门控 FAIL，不铺 4 折**。gapcut 若复活需与召回侧对冲（降 p / 严重度 oversampling 配对），或等 missed 家族被容量/上下文杠杆（1500ep/ResEnc）压下去之后再叠加。
 
 产物：`logs/gate_gapcut_fold0_raw.jsonl`；模型 `results/Dataset1001_ToothSemanticNoXMirror/nnUNetTrainer_onlyMirror01_gapcut__nnUNetPlans__3d_fullres/fold_0/`。
+
+## 十、ResEncL fold_0 试点（2026-10-11 启动，进行中）
+
+**选型理由**：patch [112,224,256] = 6.1M 体素 ≈ 3× plain UNet 上下文，直接治根因「patch 局部性 → 缺牙全局信息不可见」；同时针对第一家族 missed（47.5%，主力在满弓大 case）。ResidualEncoderUNet 6 stages、n_blocks (1,3,4,6,6,6)，官方 preset `nnUNetResEncUNetLPlans`（24GB 档）。
+
+**配置**：planner 文件已 backport（官方 2.7.0 原样 + 一行 `resample_torch` import 修复）→ `nnunetv2/experiment_planning/experiment_planners/residual_unets/residual_encoder_unet_planners.py`；trainer 组合 `nnUNetTrainer_onlyMirror01`（mirror_axes=(1,2) 不变）；3 GPU DDP（1,2,3，GPU 0 留空）。
+
+**坑**：plans 默认 batch_size 2 < 3 GPU → DDP 断言失败。手动 override batch 2→3（per-GPU local batch 1，实测 17.4GB/卡，余量充足）。override 只落在 preprocessed 目录的 plans json（gitignore 内），重规划需重打——脚本 `scripts/train_fold_resenc_l.sh` 头注释已记录。
+
+**实测**：**198 s/epoch**（预估区间 185–215s 内）× 1000 epoch ≈ **55h**，ETA 10-13 深夜。train_loss 正常下降（epoch 3→5: 0.179→0.152）。
+
+**门控**：训完后同口径 40-case 门控（对照 1001 fold_0：worst20 ≥ 0.8973 且 best20 ≥ 0.9655）。PASS → 铺 5 折（~11.5 天 3 GPU）+ 评估 gapcut 叠加复活条件；FAIL → 记录机制结论，转 gapcut v2 对冲版或 severity 加权采样。
