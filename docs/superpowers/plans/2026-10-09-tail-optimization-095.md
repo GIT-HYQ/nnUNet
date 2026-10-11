@@ -116,9 +116,31 @@
 ## 八、执行状态
 
 - [x] Wave 0.1 三分分解重跑（0.5 min，err_decompose_1001.json）
-- [ ] Wave 0.2 长尾 GT 审计（用户可视审计，焦点 4 case：P_036/P_368/P_378/P_527）
+- [ ] Wave 0.2 长尾 GT 审计（用户可视审计，焦点 4 case：P_036/P_368/P_378/P_527；材料已备 `eval/gt_audit_4cases/`）
 - [x] Wave 0.3 结构对比结论（twin 家族消灭；drift=phantom 同源；missed 升第一）
 - [x] Wave 1 幻影概率门控（**判死**：自信地错，AUC 0.873 不可分）
 - [x] Wave 2 原设计量化推翻（96% 已是部分牙列；替代杠杆见 §7）
-- [ ] Wave 3 / §7 替代杠杆：需用户裁决先跑哪个 fold_0 试点
+- [x] §7.① gapcut fold_0 试点（2026-10-11 01:37 训完，**门控 FAIL**，见 §9）
+- [ ] Wave 3 下一杠杆：待用户裁决（1500ep 零代码 vs gapcut v2 vs ResEnc backport）
 - [ ] 终评报告
+
+## 九、gapcut fold_0 门控结果（2026-10-11，FAIL）
+
+训练：1000 epoch，39.8h（143.2 s/epoch 均值），final val Dice **0.8125**（1001 fold_0 = 0.8185，−0.006 噪声级）。
+
+**40-case 门控（单折 checkpoint_final，对照 1001 fold_0 同折）**：
+
+| 准则 | 规则 | 1001 fold_0 | gapcut | 判定 |
+|---|---|---|---|---|
+| 1 | best20 ≥ 0.9855 − 0.02 | 0.9855 | 0.9827（−0.0028） | PASS |
+| 2 | worst20 ≥ 0.8773 + 0.02 | 0.8773 | 0.8733（**−0.0040**） | **FAIL** |
+
+**逐 case 结构（关键发现——机制按设计起效，但代价是召回）**：
+
+- **目标家族（幻影/漂移）改善**：P_036 +0.043（幻影 case，0.486→0.528）、P_389 +0.025、P_122 +0.022、P_002 +0.019、P_542 +0.014、P_387 +0.007、P_368 +0.005；
+- **召回家族（纯漏检）受损**：P_527 **−0.108**（纯漏检 case，17.9k 漏检体素，无幻影——"缺口=无牙"教得越狠，边界侵蚀越重）、F_003 −0.036、P_322 −0.035、P_079 −0.024、P_341 −0.020；
+- 净效果 = 把 dice 从欠分割型 case 转移给幻影型 case，总和≈0。
+
+**结论**：gapcut 方向对幻影家族有效（P_036 等 7 例全升），但单独使用使决策边界向"无牙"偏移，在 missed 已是第一家族（47.5%）的背景下净收益为负。**门控 FAIL，不铺 4 折**。gapcut 若复活需与召回侧对冲（降 p / 严重度 oversampling 配对），或等 missed 家族被容量/上下文杠杆（1500ep/ResEnc）压下去之后再叠加。
+
+产物：`logs/gate_gapcut_fold0_raw.jsonl`；模型 `results/Dataset1001_ToothSemanticNoXMirror/nnUNetTrainer_onlyMirror01_gapcut__nnUNetPlans__3d_fullres/fold_0/`。
