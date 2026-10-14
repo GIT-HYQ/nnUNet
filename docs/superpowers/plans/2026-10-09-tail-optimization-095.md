@@ -173,3 +173,33 @@
 **门控 40→38-case**（worst20 剔 P_036/368 → worst18，best20 不变）：1001 fold_0 基线 worst18=0.9067 / best20=0.9855；ResEncL 门槛 **worst18 ≥ 0.9267 且 best20 ≥ 0.9655**。gapcut 新口径复验仍 FAIL（worst18 −0.0071）。
 
 终评报告两口径并行（旧 66/69/72 列 + 新 63-case 列），保与历史结果可比。
+
+## 十二、ResEncL fold_0 门控结果（2026-10-14，FAIL）
+
+训练：55.2h（200 s/epoch × 1000），10-14 02:19 训完，内部 val Dice **0.8606**（1001 fold_0 = 0.8185，**+0.042**）——但 val 是随机 81 例，代表分布中部。
+
+**38-case 门控（单折 checkpoint_final，`logs/gate_resenc_l_fold0_raw.jsonl`）**：
+
+| 侧 | ResEncL fold_0 | 1001 fold_0 基线 | 门槛 | 判定 |
+|---|---|---|---|---|
+| worst18 | **0.9000** | 0.9067 | ≥0.9267 | **FAIL** |
+| best20 | 0.9794 | 0.9855 | ≥0.9655 | PASS |
+
+**逐 case 机制结论——与 gapcut 几乎完美镜像**：
+- ResEncL 赢在召回/边界家族：P_527 **+0.028**（gapcut 同 case −0.108！）、P_389 +0.022、F_003 +0.017、P_542 +0.015；
+- ResEncL 伤在幻影/漂移家族：P_341 −0.071、P_002 −0.040、P_322 −0.038、P_122 −0.023、P_061 −0.021（gapcut 恰好改善这批：P_002 +0.019、P_122 +0.022）。
+
+**解读**：① 容量+大上下文救回了分布中部（val +0.042）但**压不住满弓先验**（上下文更大→弓更完整→补牙更自信），missed 家族在尾部未降——gapcut 的复活条件未满足；② 两试点逐例互补 = 架构间错误不相关的直接证据 → 零训练集成互补性检验随即执行（`scripts/ensemble_gate_1001f0_resenc.py`，1001f0+ResEncLf0 softmax 平均，`logs/gate_ens1001f0_resencf0.jsonl`）。
+
+产物：模型 `results/.../nnUNetTrainer_onlyMirror01__nnUNetResEncUNetLPlans__3d_fullres/fold_0/`；门控原始分 `logs/gate_resenc_l_fold0_raw.jsonl`（40-case 全量，38-case 口径在均值时剔除 P_036/368）。
+
+### 集成互补性检验（零训练，2026-10-14）——否定推理侧互补
+
+1001 f0 + ResEncL f0 softmax 平均（`scripts/ensemble_gate_1001f0_resenc.py` → `logs/gate_ens1001f0_resencf0.jsonl`）：
+
+| 侧 | 2 模型集成 | 1001 f0 单 | ResEncL f0 单 |
+|---|---|---|---|
+| worst18 | **0.9019** | 0.9067 | 0.9000 |
+| best20 | 0.9843 | 0.9855 | 0.9794 |
+
+**逐 case 证明"逐例镜像互补"≠"集成互补"**：ResEncL 变差的 case（P_341 0.925→0.854）集成被拖到 0.869——幻影家族在 ResEncL 上同样是高置信度错误（复现 Wave 1"自信地错"），softmax 平均无法抵消双方各自的高置信错误。**推论：往生产 5-fold 集成里加 ResEncL 折不修尾部，集成路线死**。但训练侧叠加（gapcut 教"缺口=无牙"使 ResEncL 不产生幻影 + ResEncL 容量救召回）仍是未检验假设——两试点互为对方的失败家族解药。
