@@ -203,3 +203,11 @@
 | best20 | 0.9843 | 0.9855 | 0.9794 |
 
 **逐 case 证明"逐例镜像互补"≠"集成互补"**：ResEncL 变差的 case（P_341 0.925→0.854）集成被拖到 0.869——幻影家族在 ResEncL 上同样是高置信度错误（复现 Wave 1"自信地错"），softmax 平均无法抵消双方各自的高置信错误。**推论：往生产 5-fold 集成里加 ResEncL 折不修尾部，集成路线死**。但训练侧叠加（gapcut 教"缺口=无牙"使 ResEncL 不产生幻影 + ResEncL 容量救召回）仍是未检验假设——两试点互为对方的失败家族解药。
+
+### 组合试点：gapcut-on-ResEncL（2026-10-14 启动，训练轨最后一卡）
+
+用户裁决（两试点双 FAIL + 集成路线判死后）：**训练侧叠加**。配置 = `-tr nnUNetTrainer_onlyMirror01_gapcut -p nnUNetResEncUNetLPlans`（gapcut p=0.3 参数不动，单变量 A/B：基座架构）。机制假设：gapcut 教「缺口=无牙」使 ResEncL 不再产生高置信幻影（治其 P_341/P_002/P_322 亏损家族），ResEncL 容量保住召回家族（治 gapcut 的 P_527/F_003 亏损家族）。
+
+实测 199 s/epoch（gapcut 在 6.1M voxel patch 上开销可忽略）× 1000 ≈ 55.3h，**ETA 10-17 凌晨 2 点**。脚本 `scripts/train_fold_resenc_l_gapcut.sh`，日志 `logs/train_resenc_l_gapcut_fold0.log`。
+
+门控不变：38-case，worst18 ≥ 0.9267 且 best20 ≥ 0.9655。**PASS → 铺 4 折；FAIL → 训练轨穷尽，进终评**（63-case 0.9395 收官，0.95 记录为未达）。
