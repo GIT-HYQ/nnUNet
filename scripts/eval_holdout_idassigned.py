@@ -63,15 +63,10 @@ def main():
         for r in rows:
             f.write(json.dumps(r) + "\n")
 
-    def subset(preds):
-        vals = [r["fg_after"] for r in rows
-                if r["case"] in preds or
-                (preds is None and True)]
-        return vals
-
     n72 = [r["fg_after"] for r in rows]
     n69 = [r["fg_after"] for r in rows if r["case"] not in EMPTY_GT]
     n66 = [r["fg_after"] for r in rows if r["case"] not in EMPTY_GT and r["case"] not in PATHO]
+    # 注：本脚本对逐 case dice 先 round(4) 再聚合；eval_holdout_general.py 为聚合后再 round。本数据两者逐项一致（终审核验），如复用请统一口径。
     cls_sum, cls_cnt = np.zeros(33), np.zeros(33)
     for r in rows:
         for c, v in r["per_class_after"].items():

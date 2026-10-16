@@ -34,6 +34,7 @@ def ResampleLabelToRef(imLabel, imRef, interp=sitk.sitkNearestNeighbor):
 
 
 
+# 存档工具链（Dataset1000 时代），终审标记，保留原样：以下 ITKReDirection / CropForeground 为死代码，仓库内无调用方。
 def ITKReDirection(itkimg, target_direction=(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0)):
     # target direction should be orthognal, i.e. (1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0)
 

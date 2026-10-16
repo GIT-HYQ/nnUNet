@@ -5,6 +5,7 @@ import numpy as np
 import SimpleITK as sitk
 import yaml
 
+# 存档工具链（Dataset1000 时代），终审标记，保留原样：裸 from utils import 依赖脚本目录入 sys.path，仅在 dataset_conversion/ 内部可用。
 from utils import ResampleLabelToRef, ResampleXYZAxis
 
 

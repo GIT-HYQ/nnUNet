@@ -118,4 +118,5 @@ ENV/
 
 CLAUDE.md
 AGENTS.md
+# 注：tooth_3d_semantic/ 下少量证据文件（评估指标、门控 json、普查 jsonl 等）经 git add -f 逐个强制入库（git ls-files 实测 9 个文件）；同目录新生成的其他文件不会自动被跟踪。
 tooth_3d_semantic/*
